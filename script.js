@@ -33,8 +33,10 @@ function updateTimer() {
         / 1000
     );
 
-    document.getElementById("timer").innerText =
-        `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
 }
 
 updateTimer();
