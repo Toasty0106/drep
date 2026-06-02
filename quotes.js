@@ -4,6 +4,9 @@ async function loadQuotes() {
 
     const quotes = await response.json();
 
+    document.getElementById("quote-counter").textContent =
+    `Quotes Archived: ${quotes.length}`;
+
     const container =
         document.getElementById("quotes-container");
 

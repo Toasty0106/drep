@@ -10,10 +10,10 @@ body {
     font-family: 'Poppins', sans-serif;
 
     background: linear-gradient(
-        135deg,
-        #ff9a9e,
-        #fad0c4,
-        #fad0c4
+    135deg,
+    #5D99D7,
+    #CB94F7,
+    #5D99D7
     );
 
     display: flex;
@@ -55,7 +55,7 @@ button {
 
     background: white;
 
-    color: #ff5f8f;
+    color: #6A5AE0;
 
     font-size: 18px;
 
@@ -69,8 +69,11 @@ button {
 }
 
 button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 }
+
 
 #timer {
     font-size: 2.5rem;
@@ -98,6 +101,8 @@ button:hover {
 
 .quote-card:hover {
     transform: translateY(-5px);
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .quotes-grid{
@@ -144,6 +149,16 @@ button:hover {
 .subtitle {
     font-size: 1.1rem;
     margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+#quote-counter {
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
     opacity: 0.9;
 }
 
