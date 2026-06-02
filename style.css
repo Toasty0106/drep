@@ -162,6 +162,16 @@ button:hover {
     opacity: 0.9;
 }
 
+#streak-tracker {
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+
 .countdown-container {
     display: flex;
     justify-content: center;

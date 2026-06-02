@@ -7,6 +7,21 @@ async function loadQuotes() {
     document.getElementById("quote-counter").textContent =
     `Quotes Archived: ${quotes.length}`;
 
+    const latestQuoteDate = new Date(
+    Math.max(
+        ...quotes.map(q => new Date(q.date))
+        )
+    );
+
+    const today = new Date();
+
+    const daysSinceLastQuote = Math.floor(
+        (today - latestQuoteDate) /
+        (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("streak-tracker").textContent = `Days Since Last Legendary Quote: ${daysSinceLastQuote}`;
+
     const container =
         document.getElementById("quotes-container");
 
