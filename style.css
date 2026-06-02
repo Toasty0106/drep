@@ -208,6 +208,22 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+#quote-of-the-day {
+    margin: 20px 0 30px 0;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+
+    font-size: 1.15rem;
+
+    font-style: italic;
+
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
 .countdown-container {
     display: flex;
     justify-content: center;

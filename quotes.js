@@ -4,6 +4,21 @@ async function loadQuotes() {
 
     const quotes = await response.json();
 
+    const today = new Date();
+
+    const daySeed =
+        today.getFullYear() * 1000 +
+        Math.floor(
+            (today - new Date(today.getFullYear(), 0, 0))
+            / (1000 * 60 * 60 * 24)
+        );
+
+    const quoteOfTheDay =
+        quotes[daySeed % quotes.length];
+
+    document.getElementById("quote-of-the-day").textContent =
+        `"${quoteOfTheDay.quote}"`;
+
     const randomButton =
         document.getElementById("random-quote-btn");
 
@@ -42,8 +57,6 @@ async function loadQuotes() {
             ...quotes.map(q => new Date(q.date))
         )
     );
-
-    const today = new Date();
 
     const daysSinceLastQuote = Math.floor(
         (today - latestQuoteDate) /
