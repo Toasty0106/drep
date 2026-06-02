@@ -22,7 +22,20 @@ async function loadQuotes() {
             <p class="quote-date">
                 ${q.date}
             </p>
+
+            <p class="quote-rating">
+                GOAT Rating: ${q.rating}/10
+            </p>
+
+            <div class="quote-comment">
+                <strong>Commentary:</strong><br>
+                ${q.comment}
+            </div>
         `;
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("expanded");
+        });
 
         container.appendChild(card);
     });

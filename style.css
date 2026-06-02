@@ -107,6 +107,40 @@ button:hover {
     margin: 30px 0;
 }
 
+.quote-rating {
+    margin-top: 8px;
+
+    font-size: 0.95rem;
+
+    opacity: 0.85;
+
+    font-weight: 600;
+}
+
+.quote-comment {
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    opacity: 0;
+
+    transition: all 0.3s ease;
+}
+
+.quote-card.expanded .quote-comment {
+    max-height: 200px;
+
+    margin-top: 15px;
+
+    opacity: 1;
+}
+
+.quote-card {
+    cursor: pointer;
+}
+
 .subtitle {
     font-size: 1.1rem;
     margin-bottom: 30px;
