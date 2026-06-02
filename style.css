@@ -146,6 +146,14 @@ button:hover {
     cursor: pointer;
 }
 
+.quote-date {
+    margin-top: 8px;
+
+    opacity: 0.75;
+
+    font-size: 0.9rem;
+}
+
 .subtitle {
     font-size: 1.1rem;
     margin-bottom: 30px;
@@ -162,6 +170,12 @@ button:hover {
     opacity: 0.9;
 }
 
+.quote-comment {
+    color: rgba(255,255,255,0.9);
+
+    line-height: 1.5;
+}
+
 #streak-tracker {
     font-size: 1.1rem;
 
@@ -170,6 +184,28 @@ button:hover {
     margin-bottom: 25px;
 
     opacity: 0.9;
+}
+
+#random-quote-display {
+    margin: 25px 0;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+
+    font-size: 1.1rem;
+
+    font-style: italic;
+
+    min-height: 30px;
+
+    transition: all 0.3s ease;
+}
+
+#random-quote-display:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .countdown-container {

@@ -4,12 +4,42 @@ async function loadQuotes() {
 
     const quotes = await response.json();
 
+    const randomButton =
+        document.getElementById("random-quote-btn");
+
+    const randomDisplay =
+        document.getElementById("random-quote-display");
+
+    randomButton.addEventListener("click", () => {
+
+        const quote1 =
+            quotes[Math.floor(Math.random() * quotes.length)].quote;
+
+        const quote2 =
+            quotes[Math.floor(Math.random() * quotes.length)].quote;
+
+        const words1 = quote1.split(" ");
+        const words2 = quote2.split(" ");
+
+        const part1 =
+            words1.slice(0, Math.ceil(words1.length / 2));
+
+        const part2 =
+            words2.slice(Math.floor(words2.length / 2));
+
+        const generatedQuote =
+            [...part1, ...part2].join(" ");
+
+        randomDisplay.textContent =
+            `"${generatedQuote}"`;
+    });
+
     document.getElementById("quote-counter").textContent =
-    `Quotes Archived: ${quotes.length}`;
+        `Quotes Archived: ${quotes.length}`;
 
     const latestQuoteDate = new Date(
-    Math.max(
-        ...quotes.map(q => new Date(q.date))
+        Math.max(
+            ...quotes.map(q => new Date(q.date))
         )
     );
 
@@ -20,7 +50,8 @@ async function loadQuotes() {
         (1000 * 60 * 60 * 24)
     );
 
-    document.getElementById("streak-tracker").textContent = `Days Since Last Legendary Quote: ${daysSinceLastQuote}`;
+    document.getElementById("streak-tracker").textContent =
+        `Days Since Last Legendary Quote: ${daysSinceLastQuote}`;
 
     const container =
         document.getElementById("quotes-container");
