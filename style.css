@@ -259,3 +259,7 @@ button:hover {
     margin-top: 8px;
     font-size: 1rem;
 }
+
+#goat-results {
+    margin: 30px 0;
+}
