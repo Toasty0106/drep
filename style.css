@@ -263,3 +263,11 @@ button:hover {
 #goat-results {
     margin: 30px 0;
 }
+
+#capsule-content {
+    margin: 30px 0;
+}
+
+#capsule-content p {
+    line-height: 1.8;
+}

@@ -26,19 +26,19 @@ let verdict = "";
 
 if (goatLevel >= 95) {
     verdict =
-        "GOAT status has reached dangerous levels.";
+        "Okay twin we get it, you're smart 💔";
 }
 else if (goatLevel >= 90) {
     verdict =
-        "GOAT activity detected. Proceed with admiration.";
+        "All this and still can't hear well🙄";
 }
 else if (goatLevel >= 85) {
     verdict =
-        "GOAT systems operating normally.";
+        "Least exciting day waking up as Dhriti Shaw.";
 }
 else {
     verdict =
-        "GOAT energy remains stable.";
+        "We retarding today.🔥";
 }
 
 document.getElementById("goat-results").innerHTML = `
