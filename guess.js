@@ -15,6 +15,7 @@ async function loadGame() {
     const nextButton =
         document.getElementById("next-question-btn");
 
+
     function shuffle(array) {
 
         for (let i = array.length - 1; i > 0; i--) {
@@ -28,6 +29,18 @@ async function loadGame() {
 
         return array;
     }
+
+
+    function playSound(file) {
+
+        const sound =
+            new Audio(`sounds/${file}`);
+
+        sound.volume = 0.5;
+
+        sound.play().catch(() => {});
+    }
+
 
     function generateQuestion() {
 
@@ -49,6 +62,7 @@ async function loadGame() {
             return;
         }
 
+
         const hiddenIndex =
             Math.floor(Math.random() * words.length);
 
@@ -63,6 +77,7 @@ async function loadGame() {
 
         questionBox.textContent =
             `"${displayedWords.join(" ")}"`;
+
 
         const wrongOptions = [];
 
@@ -80,7 +95,9 @@ async function loadGame() {
             });
         });
 
+
         shuffle(wrongOptions);
+
 
         const options = [
             correctAnswer,
@@ -89,7 +106,9 @@ async function loadGame() {
             wrongOptions[2]
         ];
 
+
         shuffle(options);
+
 
         options.forEach(option => {
 
@@ -98,28 +117,37 @@ async function loadGame() {
 
             btn.textContent = option;
 
+
             btn.addEventListener("click", () => {
 
                 if (option === correctAnswer) {
 
                     result.textContent =
-                        "✅ Correct!";
+                        "Correct!";
+
+                    playSound("correct.mp3");
 
                 } else {
 
                     result.textContent =
-                        `❌ Wrong! Correct answer: ${correctAnswer}`;
+                        `Wrong! Correct answer: ${correctAnswer}`;
+
+                    playSound("wrong.mp3");
                 }
+
             });
+
 
             optionsContainer.appendChild(btn);
         });
     }
 
+
     nextButton.addEventListener(
         "click",
         generateQuestion
     );
+
 
     generateQuestion();
 }

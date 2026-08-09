@@ -19,6 +19,7 @@ async function loadQuotes() {
     document.getElementById("quote-of-the-day").textContent =
         `"${quoteOfTheDay.quote}"`;
 
+
     const randomButton =
         document.getElementById("random-quote-btn");
 
@@ -49,8 +50,10 @@ async function loadQuotes() {
             `"${generatedQuote}"`;
     });
 
+
     document.getElementById("quote-counter").textContent =
         `Quotes Archived: ${quotes.length}`;
+
 
     const latestQuoteDate = new Date(
         Math.max(
@@ -66,8 +69,10 @@ async function loadQuotes() {
     document.getElementById("streak-tracker").textContent =
         `Days Since Last Legendary Quote: ${daysSinceLastQuote}`;
 
+
     const container =
         document.getElementById("quotes-container");
+
 
     quotes.forEach(q => {
 
@@ -95,9 +100,19 @@ async function loadQuotes() {
             </div>
         `;
 
+
         card.addEventListener("click", () => {
+
+            const quoteClickSound =
+                new Audio("sounds/quote-click.mp3");
+
+            quoteClickSound.volume = 0.5;
+
+            quoteClickSound.play().catch(() => {});
+
             card.classList.toggle("expanded");
         });
+
 
         container.appendChild(card);
     });
