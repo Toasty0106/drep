@@ -86,7 +86,7 @@ async function loadQuotes() {
             </p>
 
             <p class="quote-rating">
-                GOAT Rating: ${q.rating}/10
+                Retard Rating: ${q.rating}/10
             </p>
 
             <div class="quote-comment">

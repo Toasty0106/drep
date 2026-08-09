@@ -26,24 +26,24 @@ let verdict = "";
 
 if (goatLevel >= 95) {
     verdict =
-        "Okay twin we get it, you're smart 💔";
+        "IN HER TRUE FORM TODAYYYYYY🔥🔥🔥";
 }
 else if (goatLevel >= 90) {
     verdict =
-        "All this and still can't hear well🙄";
+        "Still in her prime";
 }
 else if (goatLevel >= 85) {
     verdict =
-        "Least exciting day waking up as Dhriti Shaw.";
+        "Hmm, dw, you're still my retard :)";
 }
 else {
     verdict =
-        "We retarding today.🔥";
+        "WE, yes WE, retarding today.🔥";
 }
 
 document.getElementById("goat-results").innerHTML = `
     <div class="quote-card">
-        <p><strong>GOAT Level:</strong> ${goatLevel}%</p>
+        <p><strong>Retard Level:</strong> ${goatLevel}%</p>
         <br>
 
         <p><strong>Vision Level:</strong> ${visionLevel}%</p>
