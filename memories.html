@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memories · dhriti ke liye</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="icon" type="image/webp" href="kitty.webp">
+</head>
+
+<body>
+
+    <main class="memories-page">
+
+        <header class="memories-header">
+
+            <a href="index.html" class="memories-back">
+                ← back to archive
+            </a>
+
+            <span class="memories-label">
+                PRIVATE ARCHIVE
+            </span>
+
+        </header>
+
+
+        <section class="memories-intro">
+
+            <p class="eyebrow">
+                ARCHIVE 06 · 2026
+            </p>
+
+            <h1>
+                Memories
+            </h1>
+
+            <p class="memories-description">
+                A collection of questionable outings, good times,
+                bad decisions, and evidence that we actually leave the house.
+            </p>
+
+            <div class="memories-meta">
+                <span id="memory-count">loading memories...</span>
+                <span>oldest → newest</span>
+            </div>
+
+        </section>
+
+
+        <section
+            id="memories-grid"
+            class="memories-grid"
+            aria-label="Memory archive"
+        >
+            <p class="memories-loading">
+                loading archive...
+            </p>
+        </section>
+
+
+        <footer class="site-footer memories-footer">
+
+            <span>some things are better archived</span>
+
+            <span>
+                <a href="index.html">dhriti ke liye</a>
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Fullscreen memory viewer -->
+
+    <div
+        id="memory-viewer"
+        class="memory-viewer"
+        aria-hidden="true"
+    >
+
+        <button
+            id="viewer-close"
+            class="viewer-close"
+            aria-label="Close viewer"
+        >
+            ×
+        </button>
+
+
+        <button
+            id="viewer-prev"
+            class="viewer-navigation viewer-prev"
+            aria-label="Previous memory"
+        >
+            ←
+        </button>
+
+
+        <div class="viewer-content">
+
+            <div id="viewer-media"></div>
+
+            <div class="viewer-info">
+
+                <span id="viewer-date"></span>
+
+                <span id="viewer-position"></span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="viewer-next"
+            class="viewer-navigation viewer-next"
+            aria-label="Next memory"
+        >
+            →
+        </button>
+
+    </div>
+
+
+    <script src="memories.js"></script>
+    <script src="audio.js"></script>
+
+</body>
+
+</html>
