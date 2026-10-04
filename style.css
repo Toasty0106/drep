@@ -14,9 +14,7 @@ html {
 
 body {
     min-height: 100vh;
-
     font-family: 'Poppins', sans-serif;
-
     color: #f7f4ff;
 
     background:
@@ -54,11 +52,14 @@ button {
     font-family: inherit;
 }
 
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
 .home-page {
     width: min(1100px, 90%);
-
     margin: 0 auto;
-
     padding: 35px 0 25px;
 }
 
@@ -69,7 +70,6 @@ button {
 
 .site-header {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -80,14 +80,12 @@ button {
 
 .site-logo {
     font-size: 1.05rem;
-
     font-weight: 600;
-
     letter-spacing: -0.02em;
 
-    transition: opacity 0.2s ease;
-
     color: #ffffff;
+
+    transition: opacity 0.2s ease;
 }
 
 .site-logo:hover {
@@ -96,9 +94,7 @@ button {
 
 .header-date {
     font-size: 0.7rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.16em;
 
     color: rgba(203, 148, 247, 0.65);
@@ -111,7 +107,6 @@ button {
 
 .hero {
     max-width: 850px;
-
     padding: 105px 0 95px;
 }
 
@@ -119,11 +114,8 @@ button {
     margin-bottom: 22px;
 
     font-size: 0.7rem;
-
     font-weight: 600;
-
     letter-spacing: 0.2em;
-
     text-transform: uppercase;
 
     color: #8bbcf0;
@@ -133,11 +125,8 @@ button {
     font-family: 'DM Serif Display', serif;
 
     font-size: clamp(4rem, 9vw, 7.5rem);
-
     font-weight: 400;
-
     line-height: 0.95;
-
     letter-spacing: -0.04em;
 
     background:
@@ -168,7 +157,6 @@ button {
 
 .hero-divider {
     width: 100%;
-
     height: 1px;
 
     margin: 38px 0 30px;
@@ -186,7 +174,6 @@ button {
     max-width: 700px;
 
     font-size: 1rem;
-
     line-height: 1.9;
 
     color: rgba(255, 255, 255, 0.74);
@@ -194,7 +181,6 @@ button {
 
 .subtitle strong {
     color: #ffffff;
-
     font-weight: 600;
 }
 
@@ -213,7 +199,6 @@ button {
 
 .section-heading {
     display: flex;
-
     justify-content: space-between;
 
     padding-bottom: 13px;
@@ -221,11 +206,8 @@ button {
     border-bottom: 1px solid rgba(93, 153, 215, 0.32);
 
     font-size: 0.68rem;
-
     font-weight: 600;
-
     letter-spacing: 0.18em;
-
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.55);
@@ -243,7 +225,11 @@ button {
 .archive-link {
     display: grid;
 
-    grid-template-columns: 70px 1.5fr 2fr 35px;
+    grid-template-columns:
+        70px
+        1.5fr
+        2fr
+        35px;
 
     align-items: center;
 
@@ -277,7 +263,6 @@ button {
 
 .archive-number {
     font-size: 0.72rem;
-
     font-weight: 600;
 
     color: #82b5e8;
@@ -322,19 +307,15 @@ button {
 
 .site-footer {
     display: flex;
-
     justify-content: space-between;
 
     margin-top: 65px;
-
     padding-top: 20px;
 
     border-top: 1px solid rgba(93, 153, 215, 0.22);
 
     font-size: 0.65rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.14em;
 
     color: rgba(255, 255, 255, 0.38);
@@ -350,7 +331,6 @@ button {
     padding: 11px 20px;
 
     border: 1px solid rgba(147, 188, 230, 0.45);
-
     border-radius: 6px;
 
     background: rgba(93, 153, 215, 0.10);
@@ -358,7 +338,6 @@ button {
     color: #ffffff;
 
     font-size: 0.85rem;
-
     font-weight: 500;
 
     cursor: pointer;
@@ -391,7 +370,6 @@ button:hover {
     width: min(900px, 90%);
 
     margin: 60px auto;
-
     padding: 20px 0;
 
     text-align: center;
@@ -406,9 +384,7 @@ h1 {
     font-family: 'DM Serif Display', serif;
 
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-
     font-weight: 400;
-
     line-height: 1.05;
 
     margin-bottom: 25px;
@@ -416,9 +392,7 @@ h1 {
 
 .subtitle {
     font-size: 1rem;
-
     margin-bottom: 30px;
-
     opacity: 0.8;
 }
 
@@ -447,13 +421,11 @@ h1 {
 
 .quote-card {
     padding: 28px;
-
     margin: 0;
 
     background: rgba(16, 16, 26, 0.72);
 
     border: none;
-
     border-radius: 0;
 
     text-align: left;
@@ -482,7 +454,6 @@ h1 {
     font-family: 'DM Serif Display', serif;
 
     font-size: 1.35rem;
-
     line-height: 1.35;
 }
 
@@ -492,7 +463,6 @@ h1 {
     font-size: 0.7rem;
 
     text-transform: uppercase;
-
     letter-spacing: 0.12em;
 
     color: #8dbce9;
@@ -504,11 +474,9 @@ h1 {
     margin-top: 8px;
 
     font-size: 0.75rem;
-
     font-weight: 600;
 
     text-transform: uppercase;
-
     letter-spacing: 0.08em;
 
     color: #d2b2f3;
@@ -528,7 +496,6 @@ h1 {
     color: rgba(255, 255, 255, 0.72);
 
     font-size: 0.85rem;
-
     line-height: 1.6;
 
     transition:
@@ -553,11 +520,9 @@ h1 {
 #quote-counter,
 #streak-tracker {
     font-size: 0.75rem;
-
     font-weight: 600;
 
     text-transform: uppercase;
-
     letter-spacing: 0.12em;
 
     opacity: 0.58;
@@ -572,7 +537,6 @@ h1 {
     padding: 25px 0;
 
     border-top: 1px solid rgba(93, 153, 215, 0.35);
-
     border-bottom: 1px solid rgba(203, 148, 247, 0.30);
 
     background: transparent;
@@ -582,7 +546,6 @@ h1 {
     font-family: 'DM Serif Display', serif;
 
     font-size: 1.4rem;
-
     font-style: italic;
 
     min-height: 30px;
@@ -636,7 +599,6 @@ h1 {
     font-family: 'DM Serif Display', serif;
 
     font-size: 3rem;
-
     font-weight: 400;
 
     line-height: 1;
@@ -660,7 +622,6 @@ h1 {
     font-size: 0.65rem;
 
     text-transform: uppercase;
-
     letter-spacing: 0.14em;
 
     opacity: 0.5;
@@ -673,7 +634,6 @@ h1 {
 
 #timer {
     font-size: 2.5rem;
-
     font-weight: 600;
 
     margin: 30px 0;
@@ -720,13 +680,11 @@ h1 {
 
     .home-page {
         width: 88%;
-
         padding-top: 22px;
     }
 
     .site-header {
         align-items: flex-start;
-
         gap: 10px;
     }
 
@@ -744,7 +702,6 @@ h1 {
 
     .subtitle {
         font-size: 0.9rem;
-
         line-height: 1.8;
     }
 
@@ -1350,7 +1307,7 @@ body.viewer-open {
 
 
 /* =========================================
-   MOBILE
+   MEMORIES MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
