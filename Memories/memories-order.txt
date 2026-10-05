@@ -41,4 +41,4 @@
 41 | 2026-08-21 | video | WhatsApp Video 2026-10-04 at 18.58.02.mp4
 42 | 2026-08-15 | video | WhatsApp Video 2026-10-04 at 18.58.03.mp4
 43 | 2026-08-15 | video | WhatsApp Video 2026-10-04 at 18.58.04.mp4
-44 | 2026-09-07 | video | WhatsApp Video 2026-10-04 at 18.57.47.mp4
+44 | 2026-09-07 | gif | WhatsApp Video 2026-10-04 at 18.57.47.mp4
