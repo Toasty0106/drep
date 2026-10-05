@@ -1474,39 +1474,34 @@ body.viewer-open {
    MAIN / LEFT PHOTO
 ========================================= */
 .homepage-photo-main {
-    left: 0px;
-    top: 175px;
+    left: -15px;
+    top: 170px;
 
-    width: 250px;  /* Increased from 145px */
+    width: 265px;  /* Increased from 145px */
     height: auto; /* Scaled proportionally */
-
-    transform: rotate(-0.4deg);
 }
 
 /* =========================================
    UPPER-RIGHT PHOTO
 ========================================= */
 .homepage-photo-tall {
-    right: 0;
+    right: 0px;
     top: 60px;
 
-    width: 200px;  /* Increased from 120px */
+    width: 205px;  /* Increased from 120px */
     height: auto; /* Scaled proportionally */
-
-    transform: rotate(0.8deg);
 }
 
 /* =========================================
    LOWER-RIGHT PHOTO
 ========================================= */
 .homepage-photo-lower {
-    right: 3px;
-    top: 420px;    /* Pushed down slightly to account for larger images */
+    right: 0px;
+    top: 430px;    /* Pushed down slightly to account for larger images */
 
-    width: 200px;  /* Increased from 125px */
+    width: 205px;  /* Increased from 125px */
     height: auto; /* Scaled proportionally */
 
-    transform: rotate(0.5deg);
 }
 
 
