@@ -3,6 +3,58 @@ const ORDER_FILE = "Memories/memories-order.txt";
 let memories = [];
 let currentMemoryIndex = 0;
 
+/* =========================================
+   CUSTOM MEMORY COMMENTS CONFIGURATION
+   Map your exact filename (from memories-order.txt) to your text caption below.
+   You can add as many as you need following this exact pattern!
+========================================== */
+const memoryComments = {
+    "WhatsApp Image 2026-10-04 at 18.57.07.jpeg" : "Really fun day :)",
+    "WhatsApp Image 2026-10-04 at 18.57.11.jpeg" : "We should go on more walks it's hella fun to yap on walks :)",
+    "WhatsApp Image 2026-10-04 at 18.57.20 (1).jpeg" : "How sis complains about my bad angle choices for photos just to cut off my head :)",
+    "WhatsApp Image 2026-10-04 at 18.57.20.jpeg" : "More evidence to support the claim :)",
+    "WhatsApp Image 2026-10-04 at 18.57.21.jpeg" : "This is such a great angle idk what you mean sis </3",
+    "WhatsApp Image 2026-10-04 at 18.57.22.jpeg" : "Okay maybe I see your point o_o (but just in this particular photo)",
+    "WhatsApp Image 2026-10-04 at 18.57.45.jpeg" : "By far my favourite photo of us so far :)",
+    "WhatsApp Image 2026-10-04 at 18.57.46.jpeg" : "Most accurate representation of our friendship to date :)",
+    "WhatsApp Image 2026-10-04 at 18.57.47.jpeg" : "You look like you're planning something mischievous D:",
+    "WhatsApp Image 2026-10-04 at 18.57.48.jpeg" : "Yea you don't get to complain about my angle choices they're GOOD :)",
+    "WhatsApp Image 2026-10-04 at 18.57.48 (1).jpeg" : "I DO take photos from good angles :)",
+    "WhatsApp Image 2026-10-04 at 18.57.49 (1).jpeg" : "ALSO such a good photo (compliments to the photographer) :)",
+    "WhatsApp Image 2026-10-04 at 18.57.49.jpeg" : "Just a sweet photo of us :)",
+    "WhatsApp Image 2026-10-04 at 18.57.50.jpeg" : "'Ha mummy Chris ko khana khaane Park Street jana hai' SISSSSSS??!?!??!!? (Betrayal does come from those closest to you </3)",
+    "WhatsApp Image 2026-10-04 at 18.57.51.jpeg" : "Also a chill photo of us :)",
+    "WhatsApp Image 2026-10-04 at 18.57.52.jpeg" : "I really like this photo for the memory but also upset kyuki you got sick afterwards :( (sorry twin </3)",
+    "WhatsApp Image 2026-10-04 at 18.57.56 (1).jpeg" : "GOODBYEEEEEEE CPTIIIIII (That rhymed)",
+    "WhatsApp Image 2026-10-04 at 18.57.56.jpeg" : "That wide ass smile of yours :))) (I love it so much)",
+    "WhatsApp Image 2026-10-04 at 18.57.57 (1).jpeg" : "Why are you so photogenic behen I don't understand </3",
+    "WhatsApp Image 2026-10-04 at 18.57.57 (2).jpeg" : "The Three Musketeers (2nd meetup) :)",
+    "WhatsApp Image 2026-10-04 at 18.57.57.jpeg" : "So happy to be leaving that place LMAO",
+    "WhatsApp Image 2026-10-04 at 18.57.58 (1).jpeg" : "Yes hi can you please be slightly less photogenic sis it's not fair </3",
+    "WhatsApp Image 2026-10-04 at 18.57.58 (2).jpeg" : "Best CPTI trio :)",
+    "WhatsApp Image 2026-10-04 at 18.57.58.jpeg" : "My twin and me(so grateful for you ong) :)",
+    "WhatsApp Image 2026-10-04 at 18.57.59 (1).jpeg" : "Also such a fun day :)",
+    "WhatsApp Image 2026-10-04 at 18.57.59.jpeg" : "I had so much fun that hangout I was smiling for the entire cab ride afterwards LMAO",
+    "WhatsApp Image 2026-10-04 at 18.58.00.jpeg" : "First 3 musketeer hangout(leaning head of twin)",
+    "WhatsApp Image 2026-10-04 at 18.58.01.jpeg" : "First 3 musketeer hangout(upright head of twin)",
+    "WhatsApp Image 2026-10-04 at 18.58.02.jpeg" : "GB and your laugh :)",
+    "WhatsApp Image 2026-10-04 at 18.58.03 (1).jpeg" : "Supermodel and my ugly ass twin <3",
+    "WhatsApp Image 2026-10-04 at 18.58.03.jpeg" : "AAAAAAA YOUR LAUGH GENUINELY MELTS MY HEART",
+    "WhatsApp Image 2026-10-04 at 18.58.04.jpeg" : "Best photo of you two :)",
+    "WhatsApp Image 2026-10-04 at 18.58.04 (1).jpeg" : "Definitely the most unexpected (and funniest) trio(not you with your granny humour tho :>)",
+    "WhatsApp Video 2026-10-04 at 18.58.04.mp4" : "This was suchhhhhh a fun day :DD The movie was really good ANDDD my favourite person was there :))",
+    "WhatsApp Video 2026-10-04 at 18.58.03.mp4" : "OUR FIRST EVER HANGOUT!! :DDDDDDDDDDDD (I was soooo happy to be with you twin)",
+    "WhatsApp Video 2026-10-04 at 18.58.02.mp4" : "Sis thinks she's beautiful or something?? (she is)",
+    "WhatsApp Video 2026-10-04 at 18.57.55.mp4" : "<a wild retard appears> followed by a devilishly handsome man(me ofc)",
+    "WhatsApp Video 2026-10-04 at 18.57.55 (1).mp4" : "sixxxxxxxxxxxsayyyyyyyyyyyyyvennnnnnnnnnnnnnnn ehehehehehe",
+    "WhatsApp Video 2026-10-04 at 18.57.51 (2).mp4" : "Me gracing twin with my presence(she was in fact the one blessing me with her presence :) )",
+    "WhatsApp Video 2026-10-04 at 18.57.45.mp4" : "Ez ragebait B)",
+    "WhatsApp Video 2026-10-04 at 18.57.18.mp4" : "Us getting the same marks definitely SEALEDDD(110% certainty) that I indeed found my real twin :))",
+    "WhatsApp Video 2026-10-04 at 18.57.09.mp4" : "#1 retard(you) & #2 retard(me) meetup ehehehehee",
+    "WhatsApp Video 2026-10-04 at 18.57.07.mp4" : "Yea, the haircut kinda grew on me :>",
+    "WhatsApp Video 2026-10-04 at 18.57.47.mp4" : "Behind the scenes eheehehheheehe <33"
+};
+
 
 /* =========================================
    LOAD MEMORY ORDER
@@ -309,11 +361,18 @@ function closeViewer() {
     const mediaContainer =
         document.getElementById("viewer-media");
 
+    const commentElement =
+        document.getElementById("viewer-comment");
+
     /*
         Removing the media element stops any playing video.
     */
 
     mediaContainer.innerHTML = "";
+    
+    if (commentElement) {
+        commentElement.textContent = "";
+    }
 
     viewer.classList.remove("active");
 
@@ -330,6 +389,9 @@ function renderViewerMedia() {
 
     const mediaContainer =
         document.getElementById("viewer-media");
+
+    const commentElement =
+        document.getElementById("viewer-comment");
 
     const dateElement =
         document.getElementById("viewer-date");
@@ -373,6 +435,10 @@ function renderViewerMedia() {
         mediaContainer.appendChild(video);
     }
 
+    /* BIND CAPTION TEXT BY COMPARING FILENAME AGAINST DICTIONARY KEY */
+    if (commentElement) {
+        commentElement.textContent = memoryComments[memory.filename] || "";
+    }
 
     dateElement.textContent =
         formatDate(memory.date);
@@ -439,70 +505,33 @@ document.addEventListener("DOMContentLoaded", () => {
         const grid =
             document.getElementById("memories-grid");
 
-        grid.innerHTML = `
-            <p class="memories-error">
-                Could not load the memory archive.
-                Check that <strong>Memories/memories-order.txt</strong>
-                exists and that the filenames are correct.
-            </p>
-        `;
+        grid.innerHTML = `<p class="memories-error"> Could not load the memory archive. Check that <strong>Memories/memories-order.txt</strong> exists and that the filenames are correct. </p>`;
     });
+    document.getElementById("viewer-close").addEventListener("click", closeViewer);
+    document.getElementById("viewer-prev").addEventListener("click", showPreviousMemory);
+    document.getElementById("viewer-next").addEventListener("click", showNextMemory);
 
-
-    document
-        .getElementById("viewer-close")
-        .addEventListener("click", closeViewer);
-
-
-    document
-        .getElementById("viewer-prev")
-        .addEventListener("click", showPreviousMemory);
-
-
-    document
-        .getElementById("viewer-next")
-        .addEventListener("click", showNextMemory);
-
-
-    /*
-        Keyboard controls
-    */
+    /*Keyboard controls*/
 
     document.addEventListener("keydown", event => {
-
-        const viewer =
-            document.getElementById("memory-viewer");
-
-        if (!viewer.classList.contains("active")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeViewer();
-        }
-
-        else if (event.key === "ArrowLeft") {
-            showPreviousMemory();
-        }
-
-        else if (event.key === "ArrowRight") {
-            showNextMemory();
+    const viewer = document.getElementById("memory-viewer");
+    if (!viewer.classList.contains("active")) {
+        return;
+    }
+    if (event.key === "Escape") {
+        closeViewer();
+    }
+    else if (event.key === "ArrowLeft") {
+        showPreviousMemory();
+    }
+    else if (event.key === "ArrowRight") {
+        showNextMemory();
+    }
+    });
+    /*Clicking the dark area outside the media closes the viewer.*/
+    document.getElementById("memory-viewer").addEventListener("click", event => {
+    if (event.target.id === "memory-viewer") {
+        closeViewer();
         }
     });
-
-
-    /*
-        Clicking the dark area outside the media
-        closes the viewer.
-    */
-
-    document
-        .getElementById("memory-viewer")
-        .addEventListener("click", event => {
-
-            if (event.target.id === "memory-viewer") {
-                closeViewer();
-            }
-        });
-
 });

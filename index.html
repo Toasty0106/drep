@@ -312,7 +312,7 @@
                     </span>
 
                     <span class="archive-name">
-                        Time Capsule
+                        Birthday Capsule
                     </span>
 
                     <span class="archive-description">
@@ -392,8 +392,12 @@
 
         <footer class="site-footer">
 
-            <span>
+            <span class="easter-egg-container" id="footer-easter-egg" tabindex="0">
                 (made with more love than you could ever comprehend)
+                <!-- This hidden span will become our glowing custom bubble tooltip -->
+                <span class="easter-egg-bubble">
+                    I love you so much 💗<br> Thank you for existing🫂
+                </span>
             </span>
 
             <span>
@@ -426,6 +430,22 @@
             ×
         </button>
 
+        <!-- Added a flex container block to hold img & comment-->
+         <div
+            class="homepage-photo-viewer-content"
+            style="display: flex; flex-direction: column; align-items: center; gap: 15px;"
+         >
+        <img
+                id="homepage-photo-viewer-image"
+                src=""
+                alt="Enlarged memory"
+        >
+        <!-- This is where your custom caption will appear -->
+            <p 
+                id="homepage-photo-viewer-caption" 
+                style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; font-family: 'Poppins', sans-serif; text-align: center; max-width: 450px; line-height: 1.5; margin-top: 5px;"
+            ></p>
+        </div>
 
         <img
             id="homepage-photo-viewer-image"

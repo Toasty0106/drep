@@ -1683,3 +1683,87 @@ body.viewer-open {
         right: 18px;
     }
 }
+/* Hides the broken image icon and alt text outline until the image path loads successfully */
+.homepage-photo-viewer img:not([src]), 
+.homepage-photo-viewer img[src=""] {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* =========================================
+   FOOTER EASTER EGG BUBBLE STYLING
+========================================= */
+
+.easter-egg-container {
+    position: relative;
+    cursor: help;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.25s ease;
+}
+
+/* Light up the footer phrasing slightly when active */
+.easter-egg-container:hover,
+.easter-egg-container.mobile-active {
+    color: #c7a4ee;
+}
+
+/* The actual floating text tooltip bubble container */
+.easter-egg-bubble {
+    position: absolute;
+    bottom: calc(100% + 12px); /* Position completely above the footer text line */
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    
+    width: max-content;
+    max-width: 280px;
+    padding: 12px 16px;
+    
+    background: linear-gradient(135deg, #151525, #1c1c30);
+    border: 1px solid rgba(203, 148, 247, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(203, 148, 247, 0.15);
+    
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: none; /* Keeps normal letter capitalization casing */
+    letter-spacing: normal;
+    line-height: 1.4;
+    text-align: center;
+    
+    /* Hide the bubble wrapper by default */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 100;
+}
+
+/* The downward-facing triangle tip arrow anchor below the bubble */
+.easter-egg-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1c1c30 transparent transparent transparent;
+}
+
+/* Desktop Hover Triggers */
+@media (hover: hover) {
+    .easter-egg-container:hover .easter-egg-bubble {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Mobile Click Trigger Class toggled via JS script logic */
+.easter-egg-container.mobile-active .easter-egg-bubble {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
