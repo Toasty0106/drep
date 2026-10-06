@@ -1101,7 +1101,7 @@ h1 {
 
     inset: 0;
 
-    z-index: 1000;
+    z-index: 10000;
 
     display: flex;
 
@@ -1821,4 +1821,118 @@ body.viewer-open {
         max-width: 100% !important;
         margin: 15px 0 !important;
     }
+}
+
+
+/* =========================================
+   CUSTOM BOTTOM AUDIO PLAYER UI
+========================================= */
+
+.audio-player {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    width: min(420px, 90%);
+    padding: 12px 20px;
+    
+    /* Sleek frosted glass panel matching your theme */
+    background: rgba(16, 16, 26, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(203, 148, 247, 0.35);
+    border-radius: 50px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.6), 
+        0 0 20px rgba(203, 148, 247, 0.15);
+    
+    z-index: 9999;
+}
+
+/* Play/Pause Control Trigger Button */
+.player-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    
+    background: rgba(93, 153, 215, 0.15);
+    border: 1px solid rgba(147, 188, 230, 0.4);
+    border-radius: 50%;
+    
+    color: #ffffff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    
+    transition: 
+        background 0.25s ease, 
+        border-color 0.25s ease, 
+        transform 0.2s ease;
+}
+
+.player-btn:hover {
+    background: linear-gradient(100deg, rgba(93, 153, 215, 0.3), rgba(203, 148, 247, 0.25));
+    border-color: rgba(203, 148, 247, 0.65);
+    transform: scale(1.05);
+}
+
+/* Seeker track base */
+.progress-container {
+    flex-grow: 1;
+    height: 6px;
+    
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    
+    overflow: hidden;
+}
+
+/* Live actively filled timeline track progress indicator */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    
+    /* Glowing gradient tracking bar utilizing your color codes */
+    background: linear-gradient(90deg, #8bbcf0, #d8b9f5);
+    border-radius: 10px;
+    
+    transition: width 0.1s linear;
+}
+
+/* Mobile Media Query Optimization Fix */
+@media (max-width: 500px) {
+    .audio-player {
+        bottom: 16px;
+        padding: 10px 16px;
+        gap: 12px;
+    }
+    
+    .player-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Typography settings for the live music timestamp tracker */
+.player-time {
+    font-size: 0.68rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    min-width: 65px; /* Prevents container from shifting width layout dynamically */
+    text-align: right;
 }

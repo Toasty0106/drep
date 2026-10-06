@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Time Capsule</title>
+    <title>Birthday Capsule</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -26,6 +26,19 @@
             <button>Back to Home</button>
         </a>
 
+    </div>
+
+    <audio id="bg-music" src="./sounds/bday.mp3" preload="auto"></audio>
+
+    <div class="audio-player">
+        <button id="play-pause-btn" class="player-btn">▶</button>
+    
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+    <!-- Live time tracker display -->
+        <div id="player-time" class="player-time">0:00 / 0:00</div>
     </div>
 
     <script src="capsule.js"></script>

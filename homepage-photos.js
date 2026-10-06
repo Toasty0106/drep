@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================== */
     const photoCaptions = {
         "Homepage/home-photo-1.jpeg": "Sis looking like she thinks she's so pretty (she is)",
-        "Homepage/home-photo-2.jpeg": "Need to call the police because it HAS to be illegal to look this good",
+        "Homepage/home-photo-2.jpeg": "Proof that retards can also be drop dead gorgeous :>",
         "Homepage/home-photo-3.jpeg": "Sun helping you glow even though you were born glowing :)"
     };
 
