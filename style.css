@@ -420,7 +420,7 @@ h1 {
 }
 
 .quote-card {
-    padding: 28px;
+    padding: 50px;
     margin: 0;
 
     background: rgba(16, 16, 26, 0.72);
@@ -1766,4 +1766,59 @@ body.viewer-open {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+
+.birthday-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================================
+   CAPSULE BIRTHDAY MESSAGE LAYOUT
+========================================= */
+
+.birthday-message {
+    display: block;        /* Changes layout back to block format so text can wrap */
+    text-align: left;      /* Keeps the birthday essay looking like a clean journal layout */
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Image Wrapper Settings */
+.capsule-img-wrapper {
+    max-width: 320px;      /* Standardizes the width of your photos */
+    width: 40%;            /* Allows photos to dynamically adapt down on smaller screens */
+    margin-bottom: 15px;
+}
+
+.capsule-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;    /* Smooth rounded corners for your photos */
+    border: 1px solid rgba(203, 148, 247, 0.3); /* Matches your signature light-purple glow border */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);   /* Subtle depth shadow */
+}
+
+/* Magazine Floating Logic */
+.capsule-img-wrapper.left {
+    float: left;
+    margin-right: 20px;    /* Pushes text away from the right side of the left photo */
+}
+
+.capsule-img-wrapper.right {
+    float: right;
+    margin-left: 20px;     /* Pushes text away from the left side of the right photo */
+}
+
+/* Responsive fix for phones */
+@media (max-width: 500px) {
+    .capsule-img-wrapper {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0 !important;
+    }
 }
