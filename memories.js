@@ -5,8 +5,6 @@ let currentMemoryIndex = 0;
 
 /* =========================================
    CUSTOM MEMORY COMMENTS CONFIGURATION
-   Map your exact filename (from memories-order.txt) to your text caption below.
-   You can add as many as you need following this exact pattern!
 ========================================== */
 const memoryComments = {
     "WhatsApp Image 2026-10-04 at 18.57.07.jpeg" : "Really fun day :)",
@@ -38,7 +36,7 @@ const memoryComments = {
     "WhatsApp Image 2026-10-04 at 18.58.00.jpeg" : "First 3 musketeer hangout(leaning head of twin)",
     "WhatsApp Image 2026-10-04 at 18.58.01.jpeg" : "First 3 musketeer hangout(upright head of twin)",
     "WhatsApp Image 2026-10-04 at 18.58.02.jpeg" : "GB and your laugh :)",
-    "WhatsApp Image 2026-10-04 at 18.58.03 (1).jpeg" : "Supermodel and my ugly ass twin <3",
+    "WhatsApp Image 2026-10-04 at 18.58.03 (1).jpeg" : "Supermodel and my ugly(pretty) ass twin <3",
     "WhatsApp Image 2026-10-04 at 18.58.03.jpeg" : "AAAAAAA YOUR LAUGH GENUINELY MELTS MY HEART",
     "WhatsApp Image 2026-10-04 at 18.58.04.jpeg" : "Best photo of you two :)",
     "WhatsApp Image 2026-10-04 at 18.58.04 (1).jpeg" : "Definitely the most unexpected (and funniest) trio(not you with your granny humour tho :>)",
@@ -482,11 +480,6 @@ function showNextMemory() {
 
 
 function updateViewerButtons() {
-
-    /*
-        Buttons intentionally remain enabled so the viewer
-        loops from the first memory to the last and vice versa.
-    */
 
     document.getElementById("viewer-prev").disabled = false;
     document.getElementById("viewer-next").disabled = false;
