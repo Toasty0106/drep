@@ -51,7 +51,22 @@ const memoryComments = {
     "WhatsApp Video 2026-10-04 at 18.57.09.mp4" : "#1 retard(you) & #2 retard(me) meetup ehehehehee",
     "WhatsApp Video 2026-10-04 at 18.57.07.mp4" : "Yea, the haircut kinda grew on me :>",
     "WhatsApp Video 2026-10-04 at 18.57.47.mp4" : "Behind the scenes eheehehheheehe <33",
-    "WhatsApp Video 2026-10-04 at 18.57.51.mp4" : "Double trouble (object in the mirror is more retarded than she appears) :)"
+    "WhatsApp Video 2026-10-04 at 18.57.51.mp4" : "Double trouble (object in the mirror is more retarded than she appears) :)",
+    "WhatsApp Image 2026-10-10 at 17.51.42.jpeg" : "Type shi mfs be upto in the name of 'lappy repair' ehehehehe",
+    "WhatsApp Image 2026-10-10 at 17.51.40.jpeg" : "Rare photo of the devil's horns showing",
+    "WhatsApp Image 2026-10-10 at 17.51.41 (1).jpeg" : ":D",
+    "WhatsApp Image 2026-10-10 at 17.51.41.jpeg" : "heppi heppi heppiiii :D",
+    "WhatsApp Image 2026-10-10 at 17.51.37 (1).jpeg" : "The devil tries to hide her horns",
+    "WhatsApp Image 2026-10-10 at 17.51.37.jpeg" : "The devil fails to hide her horns >:)",
+    "WhatsApp Image 2026-10-10 at 17.51.36 (1).jpeg" : "Typa photos you see in a true crime doc (pt 1)",
+    "WhatsApp Image 2026-10-10 at 17.51.36.jpeg" : "Typa photos you see in a true crime doc (pt 2) lmao",
+    "WhatsApp Image 2026-10-10 at 17.51.35 (1).jpeg" : "Decent photo :) (I'm such a good photographer)",
+    "WhatsApp Image 2026-10-10 at 17.51.35.jpeg" : "Such a blurry photo (bad photographer)",
+    "WhatsApp Image 2026-10-10 at 17.51.35 (2).jpeg" : "Okay actually a decent photo (hellyea twin good shi)",
+    "WhatsApp Video 2026-10-10 at 17.51.42.mp4" : "CHOTUUU GOLUUU MOLUUUUU 😝😝😝",
+    "WhatsApp Video 2026-10-10 at 17.51.38.mp4" : "Typa majestic hair twin has and says 'bad hair day yawwr' yea shut up pls",
+    "WhatsApp Video 2026-10-10 at 17.51.26.mp4" : "factos :))",
+    "WhatsApp Video 2026-10-10 at 17.51.34.mp4" : "Abhi idhar bhi spread ho gaya ehehehehe (our longest hangout so far and also the most fun :) )"
 };
 
 
