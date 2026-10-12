@@ -66,7 +66,18 @@ const memoryComments = {
     "WhatsApp Video 2026-10-10 at 17.51.42.mp4" : "CHOTUUU GOLUUU MOLUUUUU 😝😝😝",
     "WhatsApp Video 2026-10-10 at 17.51.38.mp4" : "Typa majestic hair twin has and says 'bad hair day yawwr' yea shut up pls",
     "WhatsApp Video 2026-10-10 at 17.51.26.mp4" : "factos :))",
-    "WhatsApp Video 2026-10-10 at 17.51.34.mp4" : "Abhi idhar bhi spread ho gaya ehehehehe (our longest hangout so far and also the most fun :) )"
+    "WhatsApp Video 2026-10-10 at 17.51.34.mp4" : "Abhi idhar bhi spread ho gaya ehehehehe (our longest hangout so far and also the most fun :) )",
+    "WhatsApp Image 2026-10-12 at 15.23.51.jpeg" : "Part 1 of your bday celebration yeyeyeyey :D",
+    "WhatsApp Image 2026-10-12 at 15.23.52.jpeg" : "How mfs(me) feel going to a park that is closed LMAOOOOO",
+    "WhatsApp Image 2026-10-12 at 15.23.52 (1).jpeg" : "Very (im)patiently waiting for the elevator :)",
+    "WhatsApp Image 2026-10-12 at 15.23.52 (2).jpeg" : "Got caught (im)patiently waiting for the elevator ToT",
+    "WhatsApp Image 2026-10-12 at 15.23.53.jpeg" : "'Camera mein dikh raha hai' uhh yea I hope so..? Warna photo nahi ata </3",
+    "WhatsApp Image 2026-10-12 at 15.23.53 (1).jpeg" : "Decent pic (wish we coulda stayed longer lowkey)",
+    "WhatsApp Image 2026-10-12 at 15.23.54 (1).jpeg" : "Mera 2nd expression unlock hua ToT",
+    "WhatsApp Image 2026-10-12 at 15.23.54.jpeg" : "Retardess(you) and me :>",
+    "WhatsApp Image 2026-10-12 at 15.23.55.jpeg" : "How sis laughs in my face seeing my 2nd expression </3",
+    "WhatsApp Image 2026-10-12 at 15.23.58.jpeg" : "How mfs(us) feel otw home js to tell our parents refund nahi milega ToT",
+    "WhatsApp Image 2026-10-12 at 15.23.57.jpeg" : "ACTUALLYYYYYYYYYYY a good photo of us :DD",
 };
 
 
