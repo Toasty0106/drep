@@ -1942,3 +1942,31 @@ body.viewer-open {
     min-width: 65px; 
     text-align: right;
 }
+/* ---  MOBILE AUTO-ADJUST OVERRIDE FOR COUNTDOWN PHOTOS --- */
+@media (max-width: 768px) {
+    
+    .container, .countdown-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .countdown-container > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    img[class^="countdown-photo"] {
+        width: 100% !important;
+        max-width: 90% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 15px !important;
+    }
+}
